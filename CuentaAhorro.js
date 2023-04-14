@@ -1,4 +1,4 @@
-export class CuentaAhorro {
+export class CuentaAhorro { //! se deja de usar y se usa solo Cuenta
 
     #cliente;
     #saldo;

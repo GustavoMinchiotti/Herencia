@@ -1,27 +1,15 @@
-import { Cliente } from "./Cliente.js";
+//? Clase 04 Analizando código repetido.
+//* se va a utilizar solo esta clase para ambas cuentas, corriente y ahorro.
+export class Cuenta {
 
-export class CuentaCorriente {//! se deja de usar y se usa solo Cuenta
     #cliente;
-    numero;
-    agencia;
     #saldo;
-    static cantidadCuentas = 0;
 
-    set cliente(valor) {
-        if (valor instanceof Cliente)
-            this.#cliente = valor;
-    }
-
-    get cliente() {
-        return this.#cliente;
-    }
-
-    constructor(cliente, numero, agencia) {
-        this.cliente = cliente;
+    constructor(cliente, numero, agencia, saldo) {
         this.numero = numero;
         this.agencia = agencia;
-        this.#saldo = 0;
-        CuentaCorriente.cantidadCuentas++;
+        this.#cliente = cliente;
+        this.#saldo = saldo;
     }
 
     depositoEnCuenta(valor) {
@@ -46,4 +34,5 @@ export class CuentaCorriente {//! se deja de usar y se usa solo Cuenta
         valor = 200;
         valor = valor * 1000;
     }
+
 }
