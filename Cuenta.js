@@ -6,6 +6,7 @@ export class Cuenta {
     #saldo;
 
     constructor(cliente, numero, agencia, saldo) {
+
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente = cliente;
