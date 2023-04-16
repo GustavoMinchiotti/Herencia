@@ -36,4 +36,10 @@ export class Cuenta {
         valor = valor * 1000;
     }
 
+
+    prueba() {
+        console.log("Acceso desde clase PADRE desde las dos cuentas");
+    }
+
+
 }

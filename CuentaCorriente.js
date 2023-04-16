@@ -9,6 +9,12 @@ export class CuentaCorriente extends Cuenta {
         super(cliente, numero, agencia, 0);
         CuentaCorriente.cantidadCuentas++;
     }
+
+
+    prueba() {  // acceso al padre
+        super.prueba(); //* si quito el acceso al padre solo accedo al hijo (accedo desde cuenta pero al hijo--- lo sobrescribe )
+        console.log("También prueba pero desde el hijo");
+    }
 }
 
 //! se deja de usar la totalidad y se usa solo una parte como herencia solo dejando en esta cuenta las diferencias con la clase padre Cuenta.
