@@ -2,6 +2,7 @@
 import { Cliente } from './Cliente.js'
 import { CuentaCorriente } from './CuentaCorriente.js'; //* clase 04 se unen las dos cuentas para optimizar
 import { CuentaAhorro } from './CuentaAhorro.js';
+import { Cuenta } from './Cuenta.js';
 //import { Cuenta } from './Cuenta.js';
 
 
@@ -14,7 +15,8 @@ const cuentaDeMaria = new CuentaCorriente(cliente2, '2', '002');
 
 const cuentaAhorroLeonardo = new CuentaAhorro(cliente, '9985', '001', 0)
 
-/*
+//const cuentaSimple = new Cuenta(cliente, '3', '45454', '007') //* ejemplo de instancia con error porque ahora es abstracta    
+
 console.log(cuentaDeLeonardo);
 console.log(cuentaDeLeonardo.verSaldo());
 console.log('Depósito de: ', cuentaDeLeonardo.depositoEnCuenta(1000));
@@ -28,7 +30,7 @@ console.log(cuentaAhorroLeonardo.verSaldo());
 console.log("********** info cuentas ************");
 console.log(cuentaDeLeonardo);
 console.log(cuentaAhorroLeonardo);
-*/
+
 
 cuentaDeLeonardo.prueba();
 

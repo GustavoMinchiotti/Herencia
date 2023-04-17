@@ -6,6 +6,9 @@ export class Cuenta {
     #saldo;
 
     constructor(cliente, numero, agencia, saldo) {
+        if (this.constructor == Cuenta) {
+            throw new Error('No se debe instanciar objetos de la clase cuenta');
+        }
 
         this.numero = numero;
         this.agencia = agencia;
@@ -32,8 +35,6 @@ export class Cuenta {
     transferirParaCuenta(valor, cuentaDestino) {
         this.retirarDeCuenta(valor);
         cuentaDestino.depositoEnCuenta(valor);
-        valor = 200;
-        valor = valor * 1000;
     }
 
 
