@@ -1,9 +1,12 @@
 /*Importación de clases*/
 import { Cliente } from './Cliente.js'
-import { CuentaCorriente } from './CuentaCorriente.js'; //* clase 04 se unen las dos cuentas para optimizar
-import { CuentaAhorro } from './CuentaAhorro.js';
-import { Cuenta } from './Cuenta.js';
-//import { Cuenta } from './Cuenta.js';
+import { CuentaCorriente } from './Cuentas/CuentaCorriente.js';
+import { CuentaAhorro } from './Cuentas/CuentaAhorro.js';
+import { CuentaNomina } from './Cuentas/CuentaNomina.js';
+
+import { Empleado } from './Empleados/Empleado.js';
+import { Gerente } from './Empleados/Gerente.js';
+import { Director } from './Empleados/Director.js';
 
 
 
@@ -17,45 +20,13 @@ const cuentaAhorroLeonardo = new CuentaAhorro(cliente, '9985', '001', 0)
 
 //const cuentaSimple = new Cuenta(cliente, '3', '45454', '007') //* ejemplo de instancia con error porque ahora es abstracta    
 
-console.log(cuentaDeLeonardo);
-console.log(cuentaDeLeonardo.verSaldo());
-console.log('Depósito de: ', cuentaDeLeonardo.depositoEnCuenta(1000));
-console.log(cuentaDeLeonardo.verSaldo());
-console.log("******************");
-console.log(cuentaAhorroLeonardo);
-console.log(cuentaAhorroLeonardo.verSaldo());
-console.log('Depósito de: ', cuentaAhorroLeonardo.depositoEnCuenta(600));
-console.log(cuentaAhorroLeonardo.verSaldo());
-
-console.log("********** info cuentas ************");
-console.log(cuentaDeLeonardo);
-console.log(cuentaAhorroLeonardo);
+const cuentaNominaLeonardo = new CuentaNomina(cliente, '9985', '001', 100);
 
 
-cuentaDeLeonardo.prueba();
+const empleado = new Empleado('Juan Pérez', '30000222', 10000);
+const gerente = new Gerente('Pedro Rivas', '25333555', 12000);
+const director = new Director('Elena Moreno', '20565999', 15000)
 
-
-
-
-
-
-// let saldo = cuentaDeLeonardo.verSaldo();
-
-// saldo = cuentaDeLeonardo.depositoEnCuenta(150);
-// cuentaDeLeonardo.transferirParaCuenta(50, cuentaDeMaria);
-
-// const saldoMaria = cuentaDeMaria.verSaldo();
-
-// console.log('Cuenta de Maria', cuentaDeMaria);
-
-// console.log('El Saldo actual (cuentaMaria) ' + saldoMaria);
-
-// const saldoLeonardo = cuentaDeLeonardo.verSaldo();
-// console.log('El Saldo actual (cuentaLeonardo) ' + saldoLeonardo);
-// console.log(CuentaCorriente.cantidadCuentas);
-
-// console.log(CuentaCorriente.cantidadCuentas);
-
-
-
-
+console.log(empleado.verBonificacion());
+console.log(gerente.verBonificacion());
+console.log(director.verBonificacion());

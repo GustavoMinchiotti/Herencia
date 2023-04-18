@@ -10,6 +10,9 @@ export class CuentaCorriente extends Cuenta {
         CuentaCorriente.cantidadCuentas++;
     }
 
+    retirarDeCuenta(valor) {
+        super._retirarDeCuenta(valor, 5)
+    }
 
     prueba() {  // acceso al padre
         super.prueba(); //* si quito el acceso al padre solo accedo al hijo (accedo desde cuenta pero al hijo--- lo sobrescribe )
