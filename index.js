@@ -8,6 +8,8 @@ import { Empleado } from './Empleados/Empleado.js';
 import { Gerente } from './Empleados/Gerente.js';
 import { Director } from './Empleados/Director.js';
 
+import { SistemaAutenticar } from './SistemaAutenticacion.js';
+
 
 
 const cliente = new Cliente('Leonardo', '13804050', '123224');
@@ -27,6 +29,8 @@ const empleado = new Empleado('Juan Pérez', '30000222', 10000);
 const gerente = new Gerente('Pedro Rivas', '25333555', 12000);
 const director = new Director('Elena Moreno', '20565999', 15000)
 
-console.log(empleado.verBonificacion());
-console.log(gerente.verBonificacion());
-console.log(director.verBonificacion());
+empleado.asignarClave('12345');
+console.log(SistemaAutenticar.login(empleado,'12345'));
+
+cliente.asignarClave('1111')
+console.log(SistemaAutenticar.login(cliente,'1111'));
